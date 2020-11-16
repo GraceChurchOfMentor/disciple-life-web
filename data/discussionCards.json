@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Caranor St. Study Group",
+    "question": "Read <span class=\"underline\">Genesis 1:1</span>. This is the first chapter of the Bible. What does it say?",
+    "answers": [
+      {
+        "name": "me",
+        "avatar": "https://randomuser.me/api/portraits/women/65.jpg",
+        "answer": "God created Heaven and Earth",
+        "time": "2d"
+      },
+      {
+        "name": "Simone",
+        "avatar": "https://randomuser.me/api/portraits/women/30.jpg",
+        "answer": "God made everything",
+        "time": "2d"
+      },
+      {
+        "name": "Anne",
+        "avatar": "https://randomuser.me/api/portraits/women/85.jpg",
+        "answer": "God created the world",
+        "time": "1d"
+      }
+    ]
+  },
+  {
+    "title": "Study with Dave",
+    "question": "Jesus gives 3 promises in <span class=\"underline\">John 10:28</span>. What are they?",
+    "answers": [
+      {
+        "name": "me",
+        "avatar": "https://randomuser.me/api/portraits/men/58.jpg",
+        "answer": "1. eternal life; 2. never take them out of his hand; 3. no one else can remove them",
+        "time": "1d"
+      },
+      {
+        "name": "Dave",
+        "avatar": "https://randomuser.me/api/portraits/men/31.jpg",
+        "answer": "Eternal life, they shall never be taken from his hand, nobody else can remove them",
+        "time": "2d"
+      }
+    ]
+  }
+]
