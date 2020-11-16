@@ -15,23 +15,28 @@ export default function Home() {
     <Layout>
       <Head>
         <title>Disciple Life App</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;1,300&family=Inter:wght@200&family=Spectral:ital,wght@0,200;1,200&display=swap" rel="stylesheet" /> 
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className="flex flex-col justify-items-stretch md:h-screen relative bg-gray-900">
         <header className="siteHeader flex flex-row justify-start items-center h-16 text-white absolute md:relative z-10">
           <div className="container mx-auto px-6">
-            <a href="/">
+            <a className="block logo w-40" href="/">
+              <img src="/disciple-life-logo-reversed-horizontal.svg" />
+              {/*
               <h1 className="logo font-serif text-base">
                 Disciple Life
               </h1>
+              */}
             </a>
           </div>
         </header>
 
         <div className="backgroundImage relative md:absolute top-0 left-0 bottom-0 right-0 mb-10 md:mb-0 pt-3/4 md:pt-0 z-0" style={{
-          backgroundImage: 'url(/AdobeStock_303970439_Preview.jpeg)',
-          backgroundPosition: 'calc( 100% / 3 * 2 ) center',
+          backgroundImage: 'url(/app-showing.jpg)',
+          backgroundPosition: 'left center',
           backgroundSize: 'cover',
         }} />
 
@@ -83,7 +88,7 @@ export default function Home() {
             </div>
             <div className="lg:order-1 lg:col-span-5 content-center">
               <div className="video responsiveVideoWidescreen shadow-xl bg-gray-700 text-white" style={{
-                backgroundImage: 'url(/AdobeStock_272804732_Preview.jpeg)',
+                backgroundImage: 'url(/app-video-placeholder.jpg)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }} onClick={e => {
@@ -159,8 +164,8 @@ export default function Home() {
                   <div className="valueProposition flex flex-row items-center my-4 font-mono text-xs">
                     <div className="icon mr-4 text-6xl text-blue-800">
                       <span className="fa-layers fa-fw">
-                        <FontAwesomeIcon icon="circle" transform="grow-4 down-1" />
-                        <FontAwesomeIcon icon={[ 'fas', item.icon ]} inverse transform="shrink-6 down-1" />
+                        <FontAwesomeIcon icon="circle" transform="grow-4" />
+                        <FontAwesomeIcon icon={[ 'fas', item.icon ]} inverse transform="shrink-6" />
                       </span>
                     </div>
                     <div className="text">
@@ -177,9 +182,9 @@ export default function Home() {
 
       <div className="callToAction bg-gray-200 pb-20 md:pt-20 font-mono text-base leading-normal relative">
         <div className="backgroundImage relative md:absolute left-0 top-0 right-0 bottom-0 mb-10 md:mb-0 pt-3/4 md:pt-0" style={{
-          backgroundImage: 'url(/AdobeStock_323151477_Preview.jpeg)',
+          backgroundImage: 'url(/app-user.jpg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'calc( 100% / 3 * 2 ) center',
+          backgroundPosition: 'right 20%',
         }}></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
