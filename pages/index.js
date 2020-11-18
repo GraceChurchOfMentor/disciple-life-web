@@ -88,7 +88,7 @@ export default function Home() {
                 e.preventDefault();
                 setToggler(!toggler)}
               }>
-                <a className="block absolute left-0 top-0 right-0 bottom-0 flex flex-row justify-center items-center text-6xl bg-gray-700 bg-opacity-25 hover:bg-transparent" href="#">
+                <a className="absolute left-0 top-0 right-0 bottom-0 flex flex-row justify-center items-center text-6xl bg-gray-700 bg-opacity-25 hover:bg-transparent" href="#">
                   <FontAwesomeIcon icon="play-circle" transform="grow-8" />
                 </a>
               </div>
