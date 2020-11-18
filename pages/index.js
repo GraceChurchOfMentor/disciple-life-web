@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-//import { fas } from '@fortawesome/free-solid-svg-icons'
-//import { faApple, faGooglePlay } from '@fortawesome/free-brands-svg-icons'
 import valuePropositions from '../data/valuePropositions.json'
 import discussionCards from '../data/discussionCards.json'
 import FsLightbox from 'fslightbox-react'
@@ -25,11 +23,6 @@ export default function Home() {
           <div className="container mx-auto px-6">
             <a className="block logo w-40" href="/">
               <img src="/disciple-life-logo-reversed-horizontal.svg" />
-              {/*
-              <h1 className="logo font-serif text-base">
-                Disciple Life
-              </h1>
-              */}
             </a>
           </div>
         </header>
@@ -103,7 +96,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <FsLightbox toggler={toggler} customSources={[
+      <FsLightbox toggler={toggler} sources={[
         <iframe src="https://player.vimeo.com/video/477581887" width="1920" height="1080" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
       ]} /> 
       <div className="appDescription py-20 bg-gradient-to-br from-green-400 to-blue-700 text-center font-mono text-gray-300 text-xl leading-normal">
