@@ -39,7 +39,7 @@ export default function Home() {
           <div className="container flex flex-col mx-auto px-6 flex-grow">
             <div className="grid items-stretch grid-cols-1 md:grid-cols-12 gap-6 flex-grow">
               <div className="md:col-span-8 md:col-start-5 lg:col-span-6 lg:col-start-7 flex flex-col justify-center">
-                <p className="lead font-serif text-4xl md:text-5xl text-center md:text-left text-white">
+                <p className="lead mx-auto md:mx-0 font-heading text-4xl md:text-5xl text-center md:text-left text-white max-w-xs md:max-w-md">
                   The Bible Study App for Disciple Makers
                 </p>
                 <div className="appButtons flex flex-col md:flex-row mt-6 justify-start items-center">
@@ -72,11 +72,14 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             <div className="lg:order-2 lg:col-span-6 lg:col-start-7 mb-8 lg:mb-0">
+              <h2 className="font-heading text-3xl md:text-4xl mb-4">
+                Disciple-making: A Universal Mandate
+              </h2>
               <p className="bibleVerse italic">
                 The things which you have heard from me&hellip;entrust these
                 to faithful men who will be able to teach others also.
 
-                <cite className="block mt-4 not-italic text-right">&ndash; 2 Timothy 2:2</cite>
+                <cite className="block mt-4 font-mono not-italic text-xl text-gray-600 text-right">&ndash; 2 Timothy 2:2</cite>
               </p>
             </div>
             <div className="lg:order-1 lg:col-span-5 content-center">
@@ -99,11 +102,11 @@ export default function Home() {
       <FsLightbox toggler={toggler} sources={[
         <iframe src="https://player.vimeo.com/video/477581887" width="1920" height="1080" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
       ]} /> 
-      <div className="appDescription py-20 bg-gradient-to-br from-green-400 to-blue-700 text-center font-mono text-gray-300 text-xl leading-normal">
+      <div className="appDescription py-20 bg-gradient-to-br from-orange-500 to-pink-800 text-center font-mono text-gray-300 text-xl leading-normal">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 xl:grid-cols-12 gap-6">
             <div className="xl:col-span-10 xl:col-start-2">
-              <h2 className="font-serif text-3xl md:text-4xl mb-4 text-white leading-snug">
+              <h2 className="font-heading text-3xl md:text-4xl mb-4 text-white">
                 21st-century Tools for First-century Living
               </h2>
               <p className="w-full md:w-3/4 lg:w-4/5 mx-auto">
@@ -113,7 +116,28 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="discussionCards grid gap-6 grid-cols-1 sm:grid-cols-12 mt-20 text-sm text-gray-800 text-left">
+          <div className="valuePropositions mt-8 text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-12">
+              <div className="sm:col-span-10 sm:col-start-2 md:col-span-8 md:col-start-3 lg:col-span-12 lg:col-start-1 grid grid-cols-1 lg:grid-cols-3 gap-6">
+                {
+                  valuePropositions.map( item =>
+                    <div key={item.title}>
+                      <div className="valueProposition flex flex-row items-center my-4 font-mono text-xs">
+                        <div className="icon mr-4 text-7xl text-white">
+                          <FontAwesomeIcon icon={[ 'fas', item.icon ]} transform="shrink-8" mask={[ 'fas', 'circle' ]} fixedWidth />
+                        </div>
+                        <div className="text">
+                          <h3 className="font-serif text-xl">{item.title}</h3>
+                          <p>{item.copy}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                }
+              </div>
+            </div>
+          </div>
+          <div className="discussionCards grid gap-6 grid-cols-1 sm:grid-cols-12 mt-12 text-sm text-gray-800 text-left">
             <div className="grid gap-6 grid-cols-1 sm:col-span-8 sm:col-start-3 md:grid-cols-2 md:col-span-12 md:col-start-1 lg:col-span-10 lg:col-start-2 xl:col-span-8 xl:col-start-3">
               {discussionCards.map( item => {
                 let lastItem = item.answers[item.answers.length - 1];
@@ -144,31 +168,6 @@ export default function Home() {
                 );
               })}
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="valuePropositions py-16">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {
-              valuePropositions.map( item =>
-                <div key={item.title}>
-                  <div className="valueProposition flex flex-row items-center my-4 font-mono text-xs">
-                    <div className="icon mr-4 text-6xl text-blue-800">
-                      <span className="fa-layers fa-fw">
-                        <FontAwesomeIcon icon="circle" transform="grow-4" />
-                        <FontAwesomeIcon icon={[ 'fas', item.icon ]} inverse transform="shrink-6" />
-                      </span>
-                    </div>
-                    <div className="text">
-                      <h3 className="font-serif text-xl">{item.title}</h3>
-                      <p>{item.copy}</p>
-                    </div>
-                  </div>
-                </div>
-              )
-            }
           </div>
         </div>
       </div>

@@ -19,6 +19,9 @@
 /* Write your own custom component styles here */
 
 @layer components {
+  .font-heading {
+    @apply font-serif leading-tight tracking-tight;
+  }
   .responsiveVideoWidescreen {
     @apply relative h-0;
     padding-top: 56.25%;
@@ -74,5 +77,11 @@
   }
   .pt-full {
     padding-top: 100%;
+  }
+  .text-7xl {
+    font-size: 5rem;
+  }
+  .text-8xl {
+    font-size: 6rem;
   }
 }
