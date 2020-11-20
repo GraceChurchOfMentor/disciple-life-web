@@ -129,7 +129,7 @@ export default function Home() {
                           <FontAwesomeIcon icon={[ 'fas', item.icon ]} transform="shrink-8" mask={[ 'fas', 'circle' ]} fixedWidth />
                         </div>
                         <div className="text">
-                          <h3 className="font-serif text-xl">{item.title}</h3>
+                          <h3 className="font-heading text-xl">{item.title}</h3>
                           <p>{item.copy}</p>
                         </div>
                       </div>
@@ -183,7 +183,7 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
             <div className="md:col-span-8 lg:col-span-6">
-              <h2 className="font-serif text-3xl md:text-4xl mb-4 leading-snug">
+              <h2 className="font-heading text-3xl md:text-4xl mb-4 leading-snug">
                 Start Now for Free
               </h2>
               <p className="mb-4">
