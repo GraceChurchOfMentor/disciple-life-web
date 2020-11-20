@@ -39,7 +39,7 @@ export default function Home() {
           <div className="container flex flex-col mx-auto px-6 flex-grow">
             <div className="grid items-stretch grid-cols-1 md:grid-cols-12 gap-6 flex-grow">
               <div className="md:col-span-8 md:col-start-5 lg:col-span-6 lg:col-start-7 flex flex-col justify-center">
-                <p className="lead mx-auto md:mx-0 font-heading text-4xl md:text-5xl text-center md:text-left text-white max-w-xs md:max-w-md">
+                <p className="lead mx-auto md:mx-0 font-heading text-4xl md:text-5xl xl:text-6xl text-center md:text-left text-white max-w-xs md:max-w-md xl:max-w-xl">
                   The Bible Study App for Disciple Makers
                 </p>
                 <div className="appButtons flex flex-col md:flex-row mt-6 justify-start items-center">
@@ -73,7 +73,8 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             <div className="lg:order-2 lg:col-span-6 lg:col-start-7 mb-8 lg:mb-0">
               <h2 className="font-heading text-3xl md:text-4xl mb-4">
-                Disciple-making: A Universal Mandate
+                Make&nbsp;Disciples:
+                A&nbsp;Call&nbsp;to&nbsp;All&nbsp;Believers
               </h2>
               <p className="bibleVerse italic">
                 The things which you have heard from me&hellip;entrust these
@@ -91,7 +92,7 @@ export default function Home() {
                 e.preventDefault();
                 setToggler(!toggler)}
               }>
-                <a className="absolute left-0 top-0 right-0 bottom-0 flex flex-row justify-center items-center text-6xl bg-gray-700 bg-opacity-25 hover:bg-transparent" href="#">
+                <a className="absolute left-0 top-0 right-0 bottom-0 flex flex-row justify-center items-center text-6xl bg-gray-700 bg-opacity-25 hover:bg-transparent text-gray-300 hover:text-white transition duration-200" href="#">
                   <FontAwesomeIcon icon="play-circle" transform="grow-8" />
                 </a>
               </div>
@@ -102,7 +103,8 @@ export default function Home() {
       <FsLightbox toggler={toggler} sources={[
         <iframe src="https://player.vimeo.com/video/477581887" width="1920" height="1080" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
       ]} /> 
-      <div className="appDescription py-20 bg-gradient-to-br from-orange-500 to-pink-800 text-center font-mono text-gray-300 text-xl leading-normal">
+
+      <div className="appDescription py-20 bg-gradient-to-tr from-orange-500 to-pink-800 text-center font-mono text-gray-300 text-xl leading-normal">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 xl:grid-cols-12 gap-6">
             <div className="xl:col-span-10 xl:col-start-2">
