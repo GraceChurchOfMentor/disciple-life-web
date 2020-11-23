@@ -18,6 +18,13 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      backgroundColor: ['disabled'],
+      cursor: ['disabled'],
+      opacity: ['disabled'],
+      textColor: ['disabled'],
+    }
+  },
   plugins: [],
 }
