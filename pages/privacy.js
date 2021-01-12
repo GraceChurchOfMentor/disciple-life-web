@@ -7,14 +7,7 @@ class Privacy extends React.Component {
     super(props);
     this.listRef = React.createRef();
     this.state = {
-      isSignedUp: false,
-      showSignupForm: true,
-      showAppButtons: false
     }
-  }
-
-  handleEmailSignUp = (email) => {
-    console.log(email);
   }
 
   render() {
