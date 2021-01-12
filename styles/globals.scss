@@ -65,6 +65,20 @@
       @apply border border-white bg-white text-gray-900;
     }
   }
+  .privacyPolicy {
+    h1 {
+      @apply mt-6
+    }
+    h2 {
+      @apply mt-3;
+    }
+    p {
+      @apply mb-3;
+    }
+    ul, ol {
+      @apply pl-4 list-disc list-outside;
+    }
+  }
 }
 
 @tailwind utilities;
