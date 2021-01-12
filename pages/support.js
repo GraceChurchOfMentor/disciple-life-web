@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout'
-import redirect from 'nextjs-redirect'
 
 class Support extends React.Component {
   constructor(props) {
@@ -9,10 +8,6 @@ class Support extends React.Component {
     this.listRef = React.createRef();
     this.state = {
     }
-  }
-
-  componentDidMount() {
-    redirect('https://airtable.com/shrsS7iLVffHzu5UX', { statusCode: 302 })
   }
 
   render() {
@@ -26,7 +21,12 @@ class Support extends React.Component {
         </Head>
 
         <div className="supportPage container my-12 mx-auto px-6">
-          <p>Redirecting you to the support form...</p>
+          <a
+            href="https://airtable.com/shrsS7iLVffHzu5UX"
+            className="underline"
+          >
+            Click here to go to the support form.
+          </a>
         </div>
       </Layout>
     )
