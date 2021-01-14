@@ -1,0 +1,10 @@
+[
+    {
+        "route": "/privacy",
+        "label": "Privacy Policy"
+    },
+    {
+        "route": "/support",
+        "label": "Support"
+    }
+]

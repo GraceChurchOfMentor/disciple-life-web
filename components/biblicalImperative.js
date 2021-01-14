@@ -12,7 +12,7 @@ export default function biblicalImperative(props) {
 
   return (
     <>
-      <div className="biblicalImperative py-20 font-mono text-xl">
+      <div className="biblicalImperative py-20 font-sans text-xl">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             <div className="lg:order-2 lg:col-span-6 lg:col-start-7 mb-8 lg:mb-0">

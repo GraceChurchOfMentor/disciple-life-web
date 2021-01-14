@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import Layout from '../components/layout'
 import AppButtons from '../components/appButtons'
 import SignupForm from '../components/signupForm'
@@ -7,6 +8,7 @@ import BiblicalImperative from '../components/biblicalImperative'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import valuePropositions from '../data/valuePropositions.json'
 import discussionCards from '../data/discussionCards.json'
+import footerLinks from '../data/footerLinks.json'
 
 class Home extends React.Component {
   constructor(props) {
@@ -14,8 +16,8 @@ class Home extends React.Component {
     this.listRef = React.createRef();
     this.state = {
       isSignedUp: false,
-      showSignupForm: true,
-      showAppButtons: false
+      showSignupForm: false,
+      showAppButtons: true
     }
   }
 
@@ -71,7 +73,7 @@ class Home extends React.Component {
 
         <BiblicalImperative showVideo={false} />
 
-        <div className="appDescription relative py-20 bg-gradient-to-tr from-yellow-500 via-red-600 to-yellow-700 bg-opacity-75 text-center font-mono text-gray-200 text-xl leading-normal">
+        <div className="appDescription relative py-20 bg-gradient-to-tr from-yellow-500 via-red-600 to-yellow-700 bg-opacity-75 text-center font-sans text-gray-200 text-xl leading-normal">
           <div className="absolute left-0 top-0 right-0 bottom-0 bg-gray-300 opacity-25 z-0"></div>
           <div className="container mx-auto px-6 relative z-10">
             <div className="grid grid-cols-1 xl:grid-cols-12 gap-6">
@@ -80,9 +82,9 @@ class Home extends React.Component {
                   21st-century Tools for First-century Living
                 </h2>
                 <p className="w-full md:w-3/4 lg:w-4/5 mx-auto">
-                  The first Bible study app designed to equip every believer to
-                  lead others as they follow Christ&mdash;&mdash;from new birth
-                  to last breath.
+                  The Bible study app designed to equip every believer to
+                  lead others as they follow Christ&mdash;from new
+                  birth to last breath.
                 </p>
               </div>
             </div>
@@ -92,7 +94,7 @@ class Home extends React.Component {
                   {
                     valuePropositions.map(item =>
                       <div key={item.title}>
-                        <div className="valueProposition flex flex-row items-center my-4 font-mono text-xs">
+                        <div className="valueProposition flex flex-row items-center my-4 font-sans text-sm">
                           <div className="icon mr-4 text-7xl text-white">
                             <FontAwesomeIcon icon={['fas', item.icon]} transform="shrink-8" mask={['fas', 'circle']} fixedWidth />
                           </div>
@@ -113,7 +115,7 @@ class Home extends React.Component {
                   let lastItem = item.answers[item.answers.length - 1];
 
                   return (
-                    <div className="discussionCard col-span-1 py-4 px-6 bg-white rounded-lg shadow-xl" key={item.title}>
+                    <div className="discussionCard col-span-1 py-4 px-6 bg-white rounded-lg shadow-xl font-mono" key={item.title}>
                       <p className="mb-4 text-gray-600">{item.title}</p>
                       <h3 className="font-serif text-lg" dangerouslySetInnerHTML={{ __html: item.question }} />
                       <ul className="mt-8">
@@ -142,7 +144,7 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className="callToAction bg-gray-200 pb-20 md:pt-20 font-mono text-base leading-normal relative">
+        <div className="callToAction bg-gray-200 pb-16 md:pt-20 font-sans text-lg leading-normal relative">
           <div className="backgroundImage relative md:absolute left-0 top-0 right-0 bottom-0 mb-10 md:mb-0 pt-3/4 md:pt-0" style={{
             backgroundImage: 'url(/app-user.jpg)',
             backgroundSize: 'cover',
@@ -171,6 +173,22 @@ class Home extends React.Component {
                   <AppButtons dark />
                 }
               </div>
+            </div>
+          </div>
+          <div className="container mt-16 mx-auto px-6 text-xs relative z-10">
+            <div className="flex flex-row">
+              <p className="mr-4">
+                &copy; 2021 <a href="https://gracechurchmentor.org" target="_blank">Grace Church of Mentor</a>.
+              </p>
+              { footerLinks.map( link => {
+                return(
+                  <Link key={ link.route } href={ link.route } passHref>
+                    <a className="mr-4 hover:underline">
+                      { link.label }
+                    </a>
+                  </Link>
+                )
+              })}
             </div>
           </div>
         </div>
