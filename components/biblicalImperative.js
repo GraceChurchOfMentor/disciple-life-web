@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import FsLightbox from 'fslightbox-react'
+import Image from 'next/image'
 
 export default function biblicalImperative(props) {
   const [toggler, setToggler] = useState(false);
@@ -36,10 +37,7 @@ export default function biblicalImperative(props) {
             </div>
             <div className="lg:order-1 lg:col-span-5 content-center">
               { ! props.showVideo &&
-                <div
-                  className="video responsiveVideoWidescreen shadow-xl bg-gray-700 text-white"
-                  style={videoBackgroundStyle}
-                />
+                <Image layout="responsive" width={400} height={400 / 16 * 9} alt="" role="presentation" src="/app-video-placeholder.jpg" />
               }
               { props.showVideo &&
                 <div
