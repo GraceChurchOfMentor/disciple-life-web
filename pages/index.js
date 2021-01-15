@@ -80,8 +80,8 @@ const CtaImage = () => {
         <Image
           layout="responsive"
           width={500}
-          height={500 / 16 * 9}
-          className="object-center object-cover pointer-events-none"
+          height={500}
+          className="object-right object-cover pointer-events-none"
           src="/app-user.jpg"
           role="presentation"
           alt=""
