@@ -1,9 +1,9 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import Layout from '../components/layout'
 import Head from '../components/head'
-import AppButtons from '../components/appButtons'
 import SignupForm from '../components/signupForm'
 import BiblicalImperative from '../components/biblicalImperative'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -36,6 +36,11 @@ const useMediaQuery = (width) => {
 
   return targetReached;
 };
+
+const DynamicAppButtons = dynamic(
+  () => import('../components/appButtons'),
+  { ssr: false }
+)
 
 const HeroImage = () => {
   const isBreakpoint = useMediaQuery(767)
@@ -141,7 +146,7 @@ class Home extends React.Component {
                     <SignupForm isSignedUp={this.state.isSignedUp} handleEmailSignUp={this.handleEmailSignUp} />
                   }
                   { this.state.showAppButtons &&
-                    <AppButtons />
+                    <DynamicAppButtons />
                   }
                 </div>
               </div>
@@ -246,7 +251,7 @@ class Home extends React.Component {
                   <SignupForm dark isSignedUp={this.state.isSignedUp} handleEmailSignUp={this.handleEmailSignUp} />
                 }
                 { this.state.showAppButtons &&
-                  <AppButtons dark />
+                  <DynamicAppButtons dark />
                 }
               </div>
             </div>

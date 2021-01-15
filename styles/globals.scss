@@ -30,41 +30,6 @@
       @apply absolute w-full h-full top-0 left-0;
     }
   }
-  .flexIconButton {
-    @apply flex flex-row justify-center items-center py-2 px-6 rounded font-sans transition duration-200;
-
-    .icon {
-      @apply text-2xl mr-4;
-    }
-    .words {
-      @apply leading-snug;
-
-      small {
-        @apply block text-xs leading-none;
-      }
-    }
-  }
-  .flexIconButtonDark {
-    @apply border border-gray-900 bg-gray-900 text-white transition duration-200;
-
-    &:hover, &:focus {
-      @apply border border-white bg-white text-gray-900;
-    }
-  }
-  .flexIconButtonDarkOutline {
-    @apply border border-gray-900 bg-none text-gray-900 transition duration-200;
-
-    &:hover, &:focus {
-      @apply border border-gray-900 bg-gray-900 text-white;
-    }
-  }
-  .flexIconButtonOutline {
-    @apply border border-white bg-none text-white transition duration-200;
-
-    &:hover, &:focus {
-      @apply border border-white bg-white text-gray-900;
-    }
-  }
   .supportPage,
   .privacyPolicy {
     h1 {
