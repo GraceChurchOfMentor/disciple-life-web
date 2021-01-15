@@ -1,8 +1,8 @@
 import React, { useState, useCallback, useEffect } from 'react'
-import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import Layout from '../components/layout'
+import Head from '../components/head'
 import AppButtons from '../components/appButtons'
 import SignupForm from '../components/signupForm'
 import BiblicalImperative from '../components/biblicalImperative'
@@ -114,12 +114,7 @@ class Home extends React.Component {
   render() {
     return (
       <Layout>
-        <Head>
-          <title>Disciple Life App</title>
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;1,300&family=Inter:wght@200&family=Spectral:ital,wght@0,200;1,200&display=swap" rel="stylesheet" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <Head title="Disciple Life App" />
 
         <div className="flex flex-col justify-items-stretch md:h-screen relative bg-gray-900">
           <header className="siteHeader flex flex-row justify-start items-center h-16 text-white absolute md:relative z-10">

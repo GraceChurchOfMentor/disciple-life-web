@@ -1,6 +1,6 @@
 import React from 'react'
-import Head from 'next/head'
 import Layout from '../components/layout'
+import Head from '../components/head'
 
 class Privacy extends React.Component {
   constructor(props) {
@@ -13,12 +13,7 @@ class Privacy extends React.Component {
   render() {
     return (
       <Layout>
-        <Head>
-          <title>Privacy Policy - Disciple Life App</title>
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;1,300&family=Inter:wght@200&family=Spectral:ital,wght@0,200;1,200&display=swap" rel="stylesheet" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <Head title="Privacy Policy - Disciple Life App" />
 
         <div className="flex flex-col justify-items-stretch relative bg-gray-900">
           <header className="siteHeader flex flex-row justify-start items-center h-16 text-white absolute md:relative z-10">
