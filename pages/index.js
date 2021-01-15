@@ -135,7 +135,7 @@ class Home extends React.Component {
           <div className="absolute left-0 top-0 right-0 bg-gradient-to-b from-black to-transparent opacity-50 h-16 md:hidden"></div>
           <div className="absolute left-0 top-0 right-0 bottom-0 bg-black opacity-50 hidden md:block z-0"></div>
 
-          <div className="hero flex flex-col flex-grow justify-items-center pb-20 md:pt-20 font-mono relative z-10">
+          <div className="hero flex flex-col flex-grow justify-items-center pb-20 md:pt-20 font-mono font-light relative z-10">
             <div className="container flex flex-col mx-auto px-6 flex-grow">
               <div className="grid items-stretch grid-cols-1 md:grid-cols-12 gap-6 flex-grow">
                 <div className="md:col-span-8 md:col-start-5 lg:col-span-6 lg:col-start-7 flex flex-col justify-center">
@@ -198,7 +198,7 @@ class Home extends React.Component {
                   let lastItem = item.answers[item.answers.length - 1];
 
                   return (
-                    <div className="discussionCard col-span-1 py-4 px-6 bg-white rounded-lg shadow-xl font-mono" key={item.title}>
+                    <div className="discussionCard col-span-1 py-4 px-6 bg-white rounded-lg shadow-xl font-mono font-light" key={item.title}>
                       <p className="mb-4 text-gray-600">{item.title}</p>
                       <h3 className="font-serif text-lg" dangerouslySetInnerHTML={{ __html: item.question }} />
                       <ul className="mt-8">

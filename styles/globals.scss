@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-gray-800;
+    @apply text-gray-800 font-extralight;
   }
   h1 {
     @apply text-2xl;
@@ -20,7 +20,7 @@
 
 @layer components {
   .font-heading {
-    @apply font-serif leading-tight tracking-tight;
+    @apply font-serif font-extralight leading-tight tracking-tight;
   }
   .responsiveVideoWidescreen {
     @apply relative h-0;
