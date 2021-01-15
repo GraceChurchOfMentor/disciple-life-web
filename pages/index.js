@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import Layout from '../components/layout'
 import AppButtons from '../components/appButtons'
 import SignupForm from '../components/signupForm'
@@ -9,6 +10,91 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import valuePropositions from '../data/valuePropositions.json'
 import discussionCards from '../data/discussionCards.json'
 import footerLinks from '../data/footerLinks.json'
+
+const useMediaQuery = (width) => {
+  const [targetReached, setTargetReached] = useState(false);
+
+  const updateTarget = useCallback((e) => {
+    if (e.matches) {
+      setTargetReached(true);
+    } else {
+      setTargetReached(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addListener(updateTarget);
+
+    // Check on mount (callback is not called until a change occurs)
+    if (media.matches) {
+      setTargetReached(true);
+    }
+
+    return () => media.removeListener(updateTarget);
+  }, []);
+
+  return targetReached;
+};
+
+const HeroImage = () => {
+  const isBreakpoint = useMediaQuery(767)
+
+  if (isBreakpoint) {
+    return (
+      <div className="mb-10">
+        <Image
+          layout="responsive"
+          width={500}
+          height={500}
+          className="object-left object-cover pointer-events-none"
+          src="/app-showing.jpg"
+          role="presentation"
+          alt=""
+        />
+      </div>
+    )
+  }
+
+  return (
+    <Image
+      layout="fill"
+      className="object-center object-cover pointer-events-none"
+      src="/app-showing.jpg"
+      role="presentation"
+      alt=""
+    />
+  )
+}
+const CtaImage = () => {
+  const isBreakpoint = useMediaQuery(767)
+
+  if (isBreakpoint) {
+    return (
+      <div className="mb-10">
+        <Image
+          layout="responsive"
+          width={500}
+          height={500 / 16 * 9}
+          className="object-center object-cover pointer-events-none"
+          src="/app-user.jpg"
+          role="presentation"
+          alt=""
+        />
+      </div>
+    )
+  }
+
+  return (
+    <Image
+      layout="fill"
+      className="object-center object-cover pointer-events-none"
+      src="/app-user.jpg"
+      role="presentation"
+      alt=""
+    />
+  )
+}
 
 class Home extends React.Component {
   constructor(props) {
@@ -44,12 +130,9 @@ class Home extends React.Component {
             </div>
           </header>
 
-          <div className="backgroundImage relative md:absolute top-0 left-0 bottom-0 right-0 mb-10 md:mb-0 pt-3/4 md:pt-0 z-0" style={{
-            backgroundImage: 'url(/app-showing.jpg)',
-            backgroundPosition: 'left center',
-            backgroundSize: 'cover',
-          }} />
+          <HeroImage />
 
+          <div className="absolute left-0 top-0 right-0 bg-gradient-to-b from-black to-transparent opacity-50 h-16 md:hidden"></div>
           <div className="absolute left-0 top-0 right-0 bottom-0 bg-black opacity-50 hidden md:block z-0"></div>
 
           <div className="hero flex flex-col flex-grow justify-items-center pb-20 md:pt-20 font-mono relative z-10">
@@ -144,12 +227,10 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className="callToAction bg-gray-200 pb-16 md:pt-20 font-sans text-lg leading-normal relative">
-          <div className="backgroundImage relative md:absolute left-0 top-0 right-0 bottom-0 mb-10 md:mb-0 pt-3/4 md:pt-0" style={{
-            backgroundImage: 'url(/app-user.jpg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'right 20%',
-          }}></div>
+        <div className="callToAction bg-gray-200 pb-6 md:pb-16 md:pt-20 font-sans text-lg leading-normal relative">
+
+          <CtaImage />
+
           <div className="container mx-auto px-6 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
               <div className="md:col-span-8 lg:col-span-6">
@@ -176,7 +257,7 @@ class Home extends React.Component {
             </div>
           </div>
           <div className="container mt-16 mx-auto px-6 text-xs relative z-10">
-            <div className="flex flex-row">
+            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start">
               <p className="mr-4">
                 &copy; 2021 <a href="https://gracechurchmentor.org" target="_blank">Grace Church of Mentor</a>.
               </p>
