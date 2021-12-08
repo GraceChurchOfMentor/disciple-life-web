@@ -1,3 +1,4 @@
+import React from 'react'
 import Layout from '../components/layout'
 
 const Faqs = [
@@ -39,10 +40,10 @@ function Faq() {
         <dl className="pl-0">
           {Faqs.map((item, i) => {
             return (
-              <>
+              <React.Fragment key={item, i}>
                 <dt className="mt-12 mb-4 text-xl">{item.question}</dt>
                 <dd>{item.answer}</dd>
-              </>
+              </React.Fragment>
             )
           })}
         </dl>
