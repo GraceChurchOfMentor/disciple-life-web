@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import Head from '../components/head'
+import Header from '../components/header'
 
 class Privacy extends React.Component {
   constructor(props) {
@@ -15,17 +16,7 @@ class Privacy extends React.Component {
       <Layout>
         <Head title="Privacy Policy - Disciple Life App" />
 
-        <div className="flex flex-col justify-items-stretch relative bg-gray-900">
-          <header className="siteHeader flex flex-row justify-start items-center h-16 text-white absolute md:relative z-10">
-            <div className="container mx-auto px-6">
-              <a className="block logo w-40" href="/">
-                <img src="/disciple-life-logo-reversed-horizontal.svg" />
-              </a>
-            </div>
-          </header>
-        </div>
-
-        <div className="privacyPolicy container my-12 mx-auto px-6">
+        <div className="contentPage privacyPolicy container my-12 mx-auto px-6">
           <h1>Privacy Policy</h1>
           <p>Last updated: January 12, 2021</p>
           <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>

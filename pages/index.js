@@ -4,6 +4,7 @@ import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import Layout from '../components/layout'
 import Head from '../components/head'
+import Header from '../components/header'
 import SignupForm from '../components/signupForm'
 import BiblicalImperative from '../components/biblicalImperative'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -118,17 +119,11 @@ class Home extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <Layout showHeader={false}>
         <Head title="Disciple Life App" />
 
         <div className="flex flex-col justify-items-stretch md:h-screen relative bg-gray-900">
-          <header className="siteHeader flex flex-row justify-start items-center h-16 text-white absolute md:relative z-10">
-            <div className="container mx-auto px-6">
-              <a className="block logo w-40" href="/">
-                <img src="/disciple-life-logo-reversed-horizontal.svg" />
-              </a>
-            </div>
-          </header>
+          <Header />
 
           <HeroImage />
 

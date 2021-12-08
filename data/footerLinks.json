@@ -1,10 +1,14 @@
 [
     {
-        "route": "/privacy",
-        "label": "Privacy Policy"
+        "route": "/faq",
+        "label": "Frequently Asked Questions"
     },
     {
         "route": "/support",
         "label": "Support"
+    },
+    {
+        "route": "/privacy",
+        "label": "Privacy Policy"
     }
 ]
