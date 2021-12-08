@@ -1,5 +1,5 @@
 module.exports = {
-    target: 'serverless',
+    //target: 'serverless',
     images: {
         loader: 'imgix',
         path: 'https://gracechurchmentor.imgix.net/disciple-life-app/'
